@@ -1,0 +1,21 @@
+	.our-clients{
+		padding: 3.5em 0;
+		background-color: #fbfbfb;
+	}
+
+
+	.sl{
+		margin: 0 2em;
+		display: flex !important;
+		justify-content: center;
+		&:not(:last-child){
+			margin-bottom: 1em;
+		}
+		@media screen and (min-width: 531px){
+			display: block;
+		} 
+		& img{
+			max-width: 90%;
+			max-height: 42px;
+		}
+	}

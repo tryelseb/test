@@ -1,0 +1,103 @@
+.our-services{
+	padding: 130px 0;
+	background-color: transparent;
+	color: $color-text;
+	.serv-list{
+		@media screen and(max-width: 1023px){
+			display: flex;
+			justify-content: space-around;
+		}
+		&__items{
+			width: 100px;
+			height: 100px;
+			background-color: $white-color;
+			box-shadow: 0 1px 15px rgba($black-color, .3);
+			border-radius: 3px;
+			@media screen and (max-width: 480px){
+				width: 80px;
+				height: 80px;
+			}
+			@media screen and (max-width: 400px){
+				width: 60px;
+				height: 60px;
+			}
+			&:not(:last-child){
+				margin-bottom: 10px;
+			}
+			&:hover .serv-list__image{
+				transform: scale(1.6);
+			}
+		}
+		&__link{
+			padding: 10px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 100%;
+			width: 100%;
+			outline: none;
+			&.activet{
+				border: 1px solid $second-main-color;
+				border-radius: 3px;
+			}
+
+		}
+		&__image{
+			max-height: 36px;
+			transform: scale(1.5);
+		}
+	}
+	.container-tab{
+		display: flex;
+		justify-content: space-between;
+		display: none;
+		animation: fadeEffect 1s;
+		&.activet{
+			display: flex;
+		}
+		.wrapper-content{
+			max-width: 520px;
+			min-height: 430px;
+			padding: 0 0 15px;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			align-items: flex-start;
+			.wrp-title{
+				& > * {
+					font-size: 30px;
+					font-family: $second-font-family;
+					font-weight: 500;
+					line-height: 1.5;
+				}
+			}
+			.src-text{
+				font-weight: 500;
+				font-size: 16px;
+				line-height: 1.6;
+				&:not(:last-child){
+					margin-bottom: 28px;
+				}
+			}
+			.link-btn{
+				display: inline-block;
+				@include m-button($white-color, $second-main-color);
+				font-weight: 300;
+				color: $color-text;
+				box-shadow: 0 2px 8px rgba($black-color, .3);
+			}
+		}
+		.wrapper-image{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			@media screen and (max-width: 500px){
+				display: none;
+			}
+		}
+	}
+}
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
